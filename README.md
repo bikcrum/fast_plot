@@ -1,5 +1,5 @@
-## Using Multi-threading for faster plotting using Matplotlib
+## Using Multi-threading for non-blocking client/server communication
 
-`plotter_publisher.py` is the main thread (server) that send the data to `plotter_susbscriber.py` (plotter thread) and plots the data using Matplotlib.
+`publisher.py` is the server that send the data to `susbscriber.py` client and prints it.
 
-To run this program, simply run `plotter_publisher.py` and `plotter_susbscriber.py` in two different terminals.
+To run this program, simply run `publisher.py` and `susbscriber.py` in two different terminals.

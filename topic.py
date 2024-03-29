@@ -1,4 +1,3 @@
-import json
 import socket
 from multiprocessing import Manager, Process
 
@@ -27,14 +26,10 @@ class Topic:
         remote_func.start()
 
     def publish(self, data, other_address):
-        assert type(data) == str, "data must be a string"
-        data = str.encode(data)
         self.soc.sendto(data, other_address)
 
     def get_data(self):
         data = self.inc_data.get('msg', None)
-        if data is not None:
-            return json.loads(data)
         return data
 
     def __del__(self):
